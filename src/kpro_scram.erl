@@ -133,13 +133,13 @@ bin(S) -> iolist_to_binary(S).
 
 %% `crypto:mac' was introduced in OTP22.1; `crypto:hmac' has been
 %% deprecated in OTP23.
--if(?OTP_RELEASE >= 23).
-hmac(Sha, Key, Data) ->
-  crypto:mac(hmac, Sha, Key, Data).
--else.
+%%-if(?OTP_RELEASE >= 23).
+%%hmac(Sha, Key, Data) ->
+%%  crypto:mac(hmac, Sha, Key, Data).
+%%-else.
 hmac(Sha, Key, Data) ->
   crypto:hmac(Sha, Key, Data).
--endif.
+%%-endif.
 
 %%%_* Emacs ====================================================================
 %%% Local Variables:
